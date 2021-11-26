@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/light_blue">
+
+        <ImageView
+            android:id="@+id/aboutButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+           android:src="@drawable/info"
+            android:textColor="@color/white"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/todolistwhite" />
+
+        <TextView
+        android:id="@+id/tasksText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="All Tasks"
+        android:textColor="@color/white"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="32sp"
+        android:fontFamily="@font/nunito_bold"/>
+
+        <!--    <Button-->
+<!--        android:id="@+id/calender"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:text="Calender"/>-->
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:background="@drawable/roundcorner"
+        android:layout_marginTop="-50dp"
+        android:paddingTop="20dp"
+        >
+
+        <TextView
+            android:id="@+id/watermark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nothing To Do"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="16dp"
+            android:textColor="@color/blue_gray"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tasksRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="60dp"
+            android:nestedScrollingEnabled="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </RelativeLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="32dp"
+        android:src="@drawable/ic_baseline_add"
+        android:backgroundTint="@color/light_blue"
+        app:tint="@color/white"
+        />
+
+</RelativeLayout>
+
+
+
